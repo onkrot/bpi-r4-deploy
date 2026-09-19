@@ -22,13 +22,10 @@ git clone --branch main https://github.com/mediatek/mtk-openwrt-feeds mtk-openwr
 \cp -r my_files/999-sfp-22-rtl8261be-boot-1g-reprobe.patch mtk-openwrt-feeds/25.12/files/target/linux/mediatek/patches-6.12
 \cp -r my_files/999-eth-21-mtk-gdm-rx-fsm-reset.patch mtk-openwrt-feeds/25.12/files/target/linux/mediatek/patches-6.12
 \cp -r my_files/999-pcs-10-lynxi-hold-link-down-on-invalid-speed.patch mtk-openwrt-feeds/25.12/files/target/linux/mediatek/patches-6.12
-<<<<<<< HEAD
-=======
 # ODSTRANENO 2026-09-16: MediaTek tenhle patch od commitu 2b48bf00 (3. 9.) veze sam
 # jako 999-crypto-07-xfrm-backport-kernel-7.1-fix-return-value-for-async-algo.patch
 # a jejich verze ma navic druhy commit (stale skb->prev po async crypto). Ponechani
 # naseho by patch aplikovalo DVAKRAT a build by spadl.
->>>>>>> d1cbf1afcb0bf6087ce245dd9335b716d725b3fd
 #\cp -r my_files/999-fix-00-xfrm-propagate-einprogress.patch mtk-openwrt-feeds/25.12/files/target/linux/mediatek/patches-6.12
 
 cd openwrt
