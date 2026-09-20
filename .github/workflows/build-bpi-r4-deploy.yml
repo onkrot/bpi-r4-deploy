@@ -40,16 +40,13 @@ on:
 permissions:
   contents: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           ref: ${{ github.event.inputs.repo_commit || github.sha }}
 
@@ -257,7 +254,7 @@ jobs:
 
       - name: Publish wifimgr-latest release
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: wifimgr-latest
           name: "luci-app-wifimgr (latest)"
@@ -275,7 +272,7 @@ jobs:
 
       - name: Publish release-sdk
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-sdk
           name: "OpenWrt SDK (latest)"
@@ -297,7 +294,7 @@ jobs:
 
       - name: Publish release-4gb-standard
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-4gb-standard
           name: "BPI-R4 4GB standard WiFi (latest)"
@@ -310,7 +307,7 @@ jobs:
 
       - name: Publish release-4gb-poe
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-4gb-poe
           name: "BPI-R4 4GB PoE WiFi (latest)"
@@ -323,7 +320,7 @@ jobs:
 
       - name: Publish release-8gb-standard
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-standard
           name: "BPI-R4 8GB standard WiFi (latest)"
@@ -336,7 +333,7 @@ jobs:
 
       - name: Publish release-8gb-poe
         if: github.event.inputs.variant == 'standard'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-poe
           name: "BPI-R4 8GB PoE WiFi (latest)"
@@ -349,7 +346,7 @@ jobs:
 
       - name: Publish release-4gb-wired
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-4gb-wired
           name: "BPI-R4 4GB wired (latest)"
@@ -362,7 +359,7 @@ jobs:
 
       - name: Publish release-4gb-poe-wired
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-4gb-poe-wired
           name: "BPI-R4 4GB PoE wired (latest)"
@@ -375,7 +372,7 @@ jobs:
 
       - name: Publish release-8gb-wired
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-wired
           name: "BPI-R4 8GB wired (latest)"
@@ -388,7 +385,7 @@ jobs:
 
       - name: Publish release-8gb-poe-wired
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-poe-wired
           name: "BPI-R4 8GB PoE wired (latest)"
@@ -401,7 +398,7 @@ jobs:
 
       - name: Publish release-8gb-wired-unifi
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-wired-unifi
           name: "BPI-R4 8GB wired UniFi (latest)"
@@ -415,7 +412,7 @@ jobs:
 
       - name: Publish release-8gb-poe-wired-unifi
         if: github.event.inputs.variant == 'wired'
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: release-8gb-poe-wired-unifi
           name: "BPI-R4 8GB PoE wired UniFi (latest)"
