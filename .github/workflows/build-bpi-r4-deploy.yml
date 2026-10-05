@@ -214,7 +214,7 @@ jobs:
       # Atomic release: delete old releases/tags only AFTER a successful build +
       # artifact prep, so a build failure leaves the existing releases intact.
       - name: Delete existing releases and tags
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const { owner, repo } = context.repo;
